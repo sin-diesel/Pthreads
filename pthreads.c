@@ -34,7 +34,7 @@ void* calculate(void* data) {
         //fprintf(stderr, "Counting res in one of threads: %f\n", *res);
     }
     pthread_exit(res);
-    return (void*) res;
+    //return (void*) res;
 }
 
 void func() {

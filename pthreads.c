@@ -33,6 +33,7 @@ void* calculate(void* data) {
         *res += sqrtf(1 - x * x) * step;
         //fprintf(stderr, "Counting res in one of threads: %f\n", *res);
     }
+    pthread_exit(res);
     return (void*) res;
 }
 
@@ -75,15 +76,15 @@ int main (int argc, char** argv) {
                         thread_data[i].start,
                         thread_data[i].step);
         pthread_create(&pthread_id[i], NULL, &calculate, &thread_data[i]);
+        pthread_join(pthread_id[i], (void**) &results[i]);
     }
 
     for (int i = 0; i < n_threads; ++i) {
-        pthread_join(pthread_id[i], (void**) &results[i]);
         fprintf(stdout, "Results[%d]: %f\n", i, *(results[i]));
         res += *(results[i]);
     }
 
-    fprintf(stdout, "Result: %f\n", res);
+    fprintf(stdout, "Result: %f\n", 2 * res);
     gettimeofday(&end_time, NULL);
     fprintf(stdout, "Time: %d\n", end_time.tv_usec - start_time.tv_usec);
 

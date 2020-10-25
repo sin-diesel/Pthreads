@@ -1,0 +1,12 @@
+Cols: 10000
+Threads number: 10
+Thread 0 data: n_calc = 1000, start = -1.000000, step = 0.000200
+Thread 1 data: n_calc = 1000, start = -0.800000, step = 0.000200
+Thread 2 data: n_calc = 1000, start = -0.600000, step = 0.000200
+Thread 3 data: n_calc = 1000, start = -0.400000, step = 0.000200
+Thread 4 data: n_calc = 1000, start = -0.200000, step = 0.000200
+Thread 5 data: n_calc = 1000, start = 0.000000, step = 0.000200
+Thread 6 data: n_calc = 1000, start = 0.200000, step = 0.000200
+Thread 7 data: n_calc = 1000, start = 0.400000, step = 0.000200
+Thread 8 data: n_calc = 1000, start = 0.600000, step = 0.000200
+Thread 9 data: n_calc = 1000, start = 0.800000, step = 0.000200
